@@ -1,7 +1,7 @@
 <?php
 // Always provide a TRAILING SLASH (/) AFTER A PATH
 define('LIBS', 'libs/');
-define('TEMP', '/alma/');
+define('TEMP', '/almabranding/');
 define('URL', 'http://'.$_SERVER['HTTP_HOST'].TEMP);
 define('ROOT', $_SERVER['DOCUMENT_ROOT'].TEMP);
 define('CACHE', ROOT.'cache/');
@@ -9,19 +9,13 @@ define('UPLOAD', URL.'uploads/');
 define('VIDEOS', UPLOAD.'videos/');
 define('IMAGES', UPLOAD.'images/');
 
-define('DB_TYPE', 'mysql');
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'lyinteragrove');
-define('DB_USER', 'mylyintera');
-define('DB_PASS', 'THQbdtXl');
 
-/*
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'lyintera_grove');
+define('DB_NAME', 'almaweb');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
-*/
+
 // The sitewide hashkey, do not change this because its used for passwords!
 // This is for other hash keys... Not sure yet
 define('HASH_GENERAL_KEY', 'MixitUp200');

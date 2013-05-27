@@ -19,13 +19,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
     <script src="<?php echo URL; ?>public/js/custom.js"></script>
-    <script src="<?php echo URL; ?>public/js/jquery.min.js"></script>
-    <script src="<?php echo URL; ?>public/js/jquery.Jcrop.js"></script>
-    <script src="<?php echo URL; ?>public/js/ajaxfileupload.js"></script>
-    <script src="<?php echo URL; ?>public/js/jquery.filedrop.js"></script>
-    <script src="<?php echo URL; ?>/ckeditor/ckeditor.js"></script>
-    <script src="<?php echo URL; ?>public/js/HTML5script.js"></script>
-    <script src="<?php echo URL; ?>public/js/file-upload.js"></script>
     
     <?php
     echo $this->js;

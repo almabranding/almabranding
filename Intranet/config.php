@@ -1,14 +1,14 @@
 <?php
 
-// Always provide a TRAILING SLASH (/) AFTER A PATH
-define('URL', 'http://'.$_SERVER['HTTP_HOST'].'/intranet/');
+define('TEMP', '/almabranding/');
+define('URL', 'http://'.$_SERVER['HTTP_HOST'].TEMP.'/intranet/');
 define('LIBS', 'libs/');
 
 define('DB_TYPE', 'mysql');
-define('DB_HOST', 'borndevelopments.com');
-define('DB_NAME', 'intranetalma');
-define('DB_USER', 'almabranding');
-define('DB_PASS', 'branding');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'almaweb');
+define('DB_USER', 'root');
+define('DB_PASS', 'root');
 
 // The sitewide hashkey, do not change this because its used for passwords!
 // This is for other hash keys... Not sure yet

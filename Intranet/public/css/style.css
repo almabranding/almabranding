@@ -15,7 +15,7 @@
     box-shadow: -5px 5px 5px #888;
     width: auto;
     padding: 10px;
-}
+} 
 body {
     background:#FFFFFF;
     color:#111;
@@ -92,10 +92,6 @@ input[type=text],input[type=password]{
     font-family: HelveticaNeue;
     border: 1px solid #acacac;    
     width: 200px;
-}
-input[name=name]{
-    text-transform: uppercase;
-    
 }
 .file-upload {
 	overflow: hidden;
@@ -262,9 +258,8 @@ header {
     float: left;
     width: 196px;
     height: 64px;
-    margin: 20px 0 0 20px;
+    margin: 34px 34px 0;
     color:#ababab;    
-    font-family: GillSans;
 }
 .header_menu{
     height: 40px;
@@ -344,8 +339,7 @@ header {
 }
 #target {
     background-color: #ccc;
-    width: 500px;
-    height: 330px;
+    max-width: 45%;
     font-size: 24px;
     display: block;
 }
@@ -464,10 +458,9 @@ header {
     min-width: 29px;
     padding: 0 0 0 10px;
     width: 29px;
-    height: 50px;
     border-left: 2px solid #373737 !important;
 }
-.table-header-repeat a {
+.table-header-repeat a{
     background: url("../images/table_sort_arrow.gif") no-repeat scroll right center transparent;
     color: #FFFFFF;
     font-family: Tahoma;
@@ -477,6 +470,9 @@ header {
     margin: 0 0 0 10px;
     padding: 0 10px 0 0;
     cursor: pointer;
+}
+tableTitle li {
+    border-left: 1px solid #373737;
 }
 #toggle-all {
     background: url("../images/checkbox.gif") repeat scroll 0 -17px transparent;
@@ -501,14 +497,13 @@ header {
 .tableContent .colsView{
      border: 1px solid #D2D2D2;
 }
-.tableView > li{
+#product-table th{
     text-align: left;
-    min-width: 110px;
 }
-.alternate-row{
+#product-table .alternate-row{
     background: none repeat scroll 0 0 #ECECEC;
 }
-.editTBtn {
+#product-table .edit {
     background: url("../images/table_icon_1.gif") no-repeat scroll 0 0 transparent;
     display: block;
     float: left;
@@ -516,10 +511,10 @@ header {
     margin: 0 8px 0 0;
     width: 24px;
 }
-.editTBtn:hover {
+#product-table .edit:hover {
     background: url("../images/table_icon_1.gif") no-repeat scroll 0 -24px transparent;
 }
-.deleteTBtn {
+#product-table .delete {
     background: url("../images/table_icon_2.gif") no-repeat scroll 0 0 transparent;
     display: block;
     float: left;
@@ -527,16 +522,83 @@ header {
     margin: 0 8px 0 0;
     width: 24px;
 }
-.deleteTBtn:hover {
+#product-table .delete:hover {
     background: url("../images/table_icon_2.gif") no-repeat scroll 0 -24px transparent;
 }
-.titleRow{
-    margin-top: 10px;
+
+#login-box {
+	width:333px;
+	height: 352px;
+	padding: 58px 76px 0 76px;
+	color: #ebebeb;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: rgba(19,93,171,0.7);
+	margin: auto;
+        border-radius: 10px;
 }
-.titleRow>td{
-    padding-top: 10px;
+
+#login-box img {
+	border:none;
 }
-#editable{
-    min-height: 50px;
-    min-width: 100px;
+
+#login-box h2 {
+	padding:0;
+	margin:0;
+	color: #ebebeb;
+	font: bold 44px "Calibri", Arial;
+}
+
+
+#login-box-name {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: right;
+	padding: 14px 10px 0 0;
+	margin:0 0 7px 0;
+}
+
+#login-box-field {
+	float: left;
+	display:inline;
+	width:230px;
+	margin:0;
+	margin:0 0 7px 0;
+}
+
+
+.form-login  {
+	width: 205px;
+	padding: 10px 4px 6px 3px;
+	border: 1px solid #0d2c52;
+	background-color:#fff;
+	font-size: 16px;
+	color: #000;
+	
+}
+
+
+.login-box-options  {
+	clear:both;
+	padding-left:87px;
+	font-size: 11px;
+}
+
+.login-box-options a {
+	color: #ebebeb;
+	font-size: 11px;
+}
+.login-box-button{
+	border:none;background:url('../images/login-btn.png');
+	margin-left:90px; 
+	width:103px; 
+	height:42px;
+	cursor: pointer;
+}
+.login-box-button:hover{
+	border:none;background:url('../images/login-btn-hover.png');
+	margin-left:90px; 
+	width:103px; 
+	height:42px;
+	cursor: pointer;
 }
