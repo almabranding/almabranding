@@ -1,0 +1,752 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 360px) {
+    
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 521px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 699px) {
+    
+}
+/*Elementos*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.menuLink{
+    text-transform: uppercase;
+}
+#container {
+    height: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+html, body {
+    height: 100%;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    display: block;
+    clear: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background:  #fff;
+    color:#333333;
+    font-size:11px;
+    text-align:center;
+    margin:0;
+    padding:0;
+    height: 100%;    
+    font-family:'Helvetica Neue', arial,sans-serif;
+}
+.bold{
+    font-weight: bold;
+}
+.centered {
+    left: 50%;
+    margin-left: -134px;
+    margin-top: -146px;
+    position: fixed;
+    top: 50%;
+}
+header{
+    background: none repeat scroll 0 0 #F8F8F7;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.header{
+   width: 470px;
+   margin:55px auto 30px;
+}
+
+.login{
+   
+}
+ol,ul{
+    list-style: none outside none;
+}
+.clr{
+    clear: both;
+    float: none !important;
+}
+#wrapper {    
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto;
+    min-width: 100%;
+    background: url("../images/gallerysBg.jpg") repeat scroll center center transparent;
+}
+footer{  
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+footer nav{
+    color: #FFFFFF;
+    font-size: 10px;
+    padding: 0;
+    position: relative;;
+}
+footer nav li{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.mapSubBar{
+    background: none repeat scroll 0 0 #000000;
+    height: 31px;
+    padding: 15px 12px 0;
+}
+
+.barRight{
+    float: right;
+}
+.barLeft{
+    float: left;
+}
+.barLeft li{
+    margin: 0 0 0 9px;
+    text-align: left;
+    width: 103px;
+}
+.preload{
+   background: url("../images/preload.gif") no-repeat scroll 0 0px transparent;
+    left: 100px;
+    position: absolute;
+    top: 100px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+h3{
+    margin: 0 0 10px 0;
+}
+p{
+    margin: 5px 0;
+}
+#floater {
+    float: left;
+    height: 50%;
+    margin-bottom: -115px;
+    position: relative;
+    width: 1px;
+}
+.frameHead{
+    background: #fff;
+}
+fieldset{
+    text-align: left;
+}
+#white_full {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+#white_box {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    height: auto;
+    left: 50%;
+    margin-left: -146px;
+    margin-top: -115px;
+    padding: 20px;
+    position: fixed;
+    top: 30%;
+    width: auto;
+    z-index: 200;
+}
+input[type="text"], input[type="password"] {
+    border: 1px solid #ACACAC;
+    border-radius: 4px 4px 4px 4px;
+    color: #555555;
+    display: inline-block;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    padding: 4px 0px;
+    vertical-align: middle;
+    width: 200px;
+}
+label {
+    display: block;
+    line-height: 18px;
+    margin: 0 10px 0 0;
+    padding: 3px 10px 0 0;
+    position: relative;
+    text-align: left;
+    width: 100px;
+}
+.btn {
+    background-color: #7D7D7D;
+    border: 1px solid #676767;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 10px 5px;
+    text-align: center;
+    width: 100px;
+}
+#page{
+    margin: 20px auto;
+    max-width: 1150px;
+    padding: 20px;
+    width: 65%;
+}
+#video{
+    position: relative;
+    width: auto;
+    height: 100%;
+}
+#map{
+    padding: 20px;
+    position: relative;
+    width: auto;
+    height: 95%;
+}
+#map>div{
+    margin: auto;
+    width: 100% !important;
+    height: 100% !important;
+}
+#pageDesc{
+    margin: auto auto 15px;
+    text-align: left;
+    width: 66%;
+}
+#pageDesc div{
+    margin: 30px 0;
+}
+#imgFull{
+    background: #ffffff;
+    overflow: hidden;
+    float: left;
+    position: relative !important;
+    width: 100%;
+    z-index: 1 !important;
+    display: none;
+    clear: both;
+    float: none;
+}
+#imgFull img {
+    width: 100%;
+}   
+
+#body{
+    width: 100%;
+    float: left;
+    position: absolute !important;
+    z-index: 0 !important;
+    height: 100% !important;
+}
+.body-background{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative !important;
+    width: 400px;
+    z-index: 1000 !important;
+}
+.backgroundContainer{
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    margin: 1% auto auto;
+    position: relative;
+    width: 96%;
+    border-right: 20px solid #ffffff;
+    border-left: 20px solid #ffffff;
+}
+.galleryThumb {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    padding: 0 25px;
+    position: absolute !important;
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 25px;
+    position: absolute !important;
+    width: 100%;
+}
+.galleryThumb > img{
+    position: absolute !important;
+    height: 100%;
+}
+.body-background > img{
+    position: absolute !important;
+    height: 100%;
+}
+.logoBox{
+    background-image: url('../images/logo.png');
+    width: 217px;
+    height: 71px;
+    margin: auto;
+    position: absolute;
+    left:50px;
+    top:50px;
+    z-index: 11;
+}
+.accessFrame{
+    background: #f7f9f9;
+    width: 0%;
+    float: left;
+    height: 100%;
+    left: 0px;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}
+.accessFrame > div{
+    height: 750px;
+    margin: auto;
+    padding: 143px 0;
+}
+.frameContent{
+    width: 240px;
+    color:#807f83;
+    width: 190px;
+}
+.frameForm{
+    color:#807f83;
+    display: none;
+    width: 214px;
+}
+.frameForm form fieldset{
+    text-align: left;
+    margin-top: 10px;
+}
+.imageMove{
+}
+input[type="text"],input[type="password"]{
+    border:none;
+    border-radius: 0px;
+    width: 200px;
+}
+input[type="submit"]{
+    border:none;
+    background: none;
+    text-decoration: underline;
+    border-radius: 0px;
+    width: 200px;
+    text-align: left;
+    color:#807f83;
+    cursor: pointer;
+}
+.frameForm textarea{
+    border:none;
+    width: 210px;
+    height: 150px;
+    resize: none;
+    border-radius: 0px;
+}
+.loginBox{
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+    height: 192px;
+    padding: 20px;
+    width: 235px;
+}
+.accessFrame p{
+    text-align: left;
+    margin-bottom: 12px; 
+}
+.title{
+    color:#000;
+}
+.accessFrame .link cufon{
+    /*border-bottom: 2px solid #cacaca;*/
+    cursor: pointer;
+}
+.accessFrame .link:hover cufon{
+    border-bottom: 2px solid #cacaca;
+    cursor: pointer;
+}
+.bgControl{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.preloadW{
+   background: url("../images/preloadW.gif") no-repeat scroll 0 0px transparent !important;
+}
+.bgContainer.selected{
+    left: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    overflow: visible;
+}
+.labelInfo{
+    background: url("../images/labelInfo.png") no-repeat scroll 0 0px transparent;
+    left: 0px;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 1
+}
+.labelNext{
+    background: url("../images/labelNext.png") no-repeat scroll 0 0px transparent;
+    position: fixed;
+    right: 0px;
+    top: 50%;
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+}
+#logoImg{
+    background: url("../images/logo.png") no-repeat scroll center center transparent;
+    height: 40px;
+    width: 168px;
+    margin: auto;
+}
+#menu{
+    background: none repeat scroll 0 0 #FFFFFF;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+#menuprimary{
+    background: none repeat scroll 0 0 #FFFFFF;
+    bottom: 0px;
+    margin-bottom: 44px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 23;
+}
+.menuTitle ul{
+    float:left;
+    width: 33%;
+}
+.menu{
+    
+}
+.header_menu {
+    color: #000000;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+.header_menu > li {
+    color: #000000;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    margin: 8px 0 21px 20px;
+    position: relative;
+    text-align: left;
+    width: 100px;
+}
+.header_menu .selected{
+    display: block;
+    height: 16px;
+    opacity: 1;
+    position: relative;
+}
+.header_menu > li:hover {
+}
+.header_menu ul {
+    margin: auto;
+    padding-top: 5px;
+    position: relative;
+    top: 0;
+    width: 98%;
+}
+.header_menu:hover li ul {
+    opacity: 1;
+}
+.header_menu ul li {
+    /*height: 0;
+    opacity: 0;*/
+    margin: 5px 0;
+    overflow: hidden;    
+    padding: 0;
+}
+.header_menu ul li a {
+    border: medium none;
+    margin: 0;
+    width: 100%;
+} 
+.menuTitle{
+    cursor: pointer;
+    margin: 0 auto;
+    display: inherit !important;
+}
+.menuOpt:over{
+    color:#000;
+}
+.menuView{
+    float:left;
+    display: inherit !important;
+}
+.bgListReset{
+    transform:translateZ(0px) translateX(0px) !important;
+    -webkit-transform:translateZ(0px) translateX(0px) !important;
+    -o-transform:translateZ(0px) translateX(0px) !important;
+    -ms-transform:translateZ(0px) translateX(0px) !important;
+}
+.container-margin{
+    background: none repeat scroll 0 0 #EBEBEB;
+    margin: 2% auto auto;
+    position: relative;
+    width: 96%;
+}
+.container-margin #body-background{
+    position: relative !important;
+}
+.bgContainer{
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+    z-index: 0;
+}
+.bgDesc{
+    background: none repeat scroll 0 0 #FFFFFF;
+    bottom: 0;
+    font-size: 20px;
+    height: 0;
+    opacity: 0;
+    padding: 10px 24px;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    z-index: 12;
+    line-height: 5px;
+}
+.bgDescShow{
+   height: auto; 
+   opacity: 1;
+}
+#fadeWhite{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 19;
+    display: none;
+}
+#descMenu{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+#descMenu #menu{
+    bottom: 0;
+    position: absolute;
+    z-index: 20;
+}
+#descMenu nav{
+    float: left;
+    min-width: 270px;
+    position: relative;
+    width: 10%;
+}
+#descInfo{
+    float: left;
+    margin: 15px 0 15px 21px;
+    max-width: 1000px;
+    position: relative;
+    text-align: left;
+    width: 65%;
+}
+#descInfoFull{
+    margin: auto;
+    position: relative;
+    text-align: left;
+    width: 65%;
+    max-width: 1150px;
+}
+#descInfoRight{
+    margin: auto;
+    padding: 20px 0;
+    position: relative;
+    text-align: left;
+    width: 96%;
+}
+.colsView{
+     -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
+#replace{
+    display: none;
+}
+#descNav {
+    bottom: 5px;
+    display: none;
+    float: right;
+    margin: 0;
+    min-height: auto !important;
+    position: absolute;
+    right: 20px;
+    width: 26px;
+    z-index: 100;
+}
+#descNav >div{
+    width: 22px;
+    height: 21px;
+    margin: 2px auto;
+    cursor: pointer;
+}
+#descNav >div:hover{
+    opacity: 0.7;
+}
+#descUp {
+    display:none;
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 -84px transparent !important;
+}
+#descClose {
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 -110px transparent !important;
+}
+#descDown{
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 0px transparent;
+}
+#descPrev{
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 -30px transparent !important;
+}
+#descNext{
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 -59px transparent !important;
+}
+.navBox{
+    background: none repeat scroll 0 0 #FFFFFF;
+    bottom: 0px;
+    height: 0;
+    position: absolute;
+    width: auto;
+    z-index: 5;
+    opacity: 0;
+}
+.navBoxShow{
+    display: inherit !important;
+    min-height: 118px;
+    opacity: 1 !important;
+    height: auto !important;
+}
+.navBoxShowPerm{
+    min-height: 180px;
+    opacity: 1 !important;
+    height: auto !important;
+}
+#selectMenu{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+#selectMenu #menu{
+    z-index: 10;
+    position: absolute;
+}
+#controlsMaps {
+    height: auto !important;
+    left: auto !important;
+    right: 67px !important;
+    top: 0 !important;
+    width: auto !important;
+}
+#controlsMaps div{
+    float:left!important;
+    opacity: 1!important;
+    top:10px!important;
+}
+.zoomMas, #_zi_icon {
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 -84px transparent !important;
+    left: auto !important;
+    right: 29px !important;
+}
+.zoomMenos, #_zo_icon {
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 0 transparent !important;
+}
+.mapZoom, #_zi_icon, #_zo_icon {
+    cursor: pointer;
+    height: 22px !important;
+    position: absolute !important;
+    width: 22px !important;
+    z-index: 100 !important;
+}
+#download{
+    background: url("../images/navBtns.jpg") no-repeat scroll 0 -135px transparent !important;
+    height: 22px;
+    position: absolute;
+    right: 115px;
+    top: 40px;
+    width: 92px;
+    z-index: 100;
+}
+#map div{
+    background-color: transparent !important;
+}
+#sectionImage{
+    width: 30%;
+    height: 100%;
+    float:left;
+    background-size: cover !important;
+}
+#sectionText{
+    background: none repeat scroll 0 0 #EBEBEB;
+    float: left;
+    height: 100%;
+    margin-left: 2%;
+    text-align: left;
+    width: 66%;
+    overflow: auto;
+}
+#sectionText > p{
+    padding: 5px 15px;
+}
+.langArrow{
+   background: url("../images/langArrow.jpg") no-repeat scroll 0 0 transparent;
+   width: 18px;
+   height: 18px;
+   float: right;
+}
