@@ -1,0 +1,25 @@
+body{
+    color:#fff;
+    background: #000;
+}
+footer,nav section{
+    border-color: #FFFFFF;
+}
+nav{
+    background: rgba(0,0,0,0.7);
+}
+#tweeterW{
+    background-position: 0 0;
+}
+#facebookW{
+    background-position: -44px 0;
+}
+#mailW{
+    background-position: -89px 0;
+}
+.cast li,#work-text .client{
+    border-color: #fff !important;
+}
+.logoBox{
+    background: url("../../../public/img/logoWhite.png") no-repeat !important;
+}

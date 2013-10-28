@@ -1,4 +1,4 @@
-
+var URL='/Almabranding/';
 var std = ({
     fontFamily: 'Din',
     color: '#7f7e82',
@@ -6,65 +6,25 @@ var std = ({
     letterSpacing: '0.3em',
     fontSize: '13px',
 });
-var h2 = ({
-    fontFamily: 'Din',
-    color: '#333333',
-    letterSpacing: '0.3em',
-    fontSize: '13px',
-});
-var h3 = ({
-    fontFamily: 'Din',
-    color: '#333333',
-    letterSpacing: '0.3em',
-    fontSize: '13px',
-});
-var link = ({
-    fontFamily: 'Din',
-    color: '#807f83',
-    letterSpacing: '0.3em',
-    fontSize: '11px',
-    hover: {
-        color: '#2d2427',
-        fontSize: '11px'
-    }
-});
-var menuLink = ({
-    fontFamily: 'Din',
-    color: '#7f7e82',
-    letterSpacing: '0.3em',
-    fontSize: '13px',
-    fontWeight: '500',
-    hover: {
-        color: '#2d2427',
-        fontSize: '13px'
-    }
-});
-var menu = ({
-    fontFamily: 'Din',
-    color: '#ffffff',
-    fontWeight: '400',
-    letterSpacing: '0.3em',
-    fontSize: '13px',
-    hover: {
-        color: '#2d2427',
-        fontSize: '13px'
-    }
-});
 
 $(window).load(function() {
-    $('.barLeft').on('mouseenter', function() {
-        $('#menuprimary').queue(function() {
-            $(this).clearQueue();
-            $(this).addClass('navBoxShow', 500);
-        });
+    $(window).scroll(function() {
+        if($(window).scrollTop() ){
+           
+        }else{
+        }
     });
-    $('#menuprimary').on('mouseleave', function() {
-        $('#menuprimary').queue(function() {
-            $(this).clearQueue();
-            $(this).removeClass('navBoxShow', 500);
-        });
+    $("#nav").addClass("js");
+    $("#nav").addClass("js").before('<div id="menu">☰</div>');
+    $("#menu").click(function(){
+	$("#nav").toggle();
     });
-    loadCufon();
+    $("#nav").removeAttr("style");
+    $(window).resize(function(){
+            if(window.innerWidth > 768) {
+                    $("#nav").removeAttr("style");
+            }
+    });
 });
 function loadCufon() {
     Cufon.replace('p,span,label', std);
@@ -73,15 +33,4 @@ function loadCufon() {
     Cufon.replace('.menuLink', menuLink);
     Cufon.replace('.menu', menu);
     Cufon.replace('.link', link);
-}
-function changeFoot(texto) {
-    $('#lemon').queue(function() {
-        $(this).clearQueue();
-        $(this).animate({'color': '#000000'}, {
-            complete: function() {
-                $(this).html(texto);
-                $(this).animate({'color': '#ffffff'});   
-                Cufon.replace('#lemon', menu);
-            }});
-    });
 }

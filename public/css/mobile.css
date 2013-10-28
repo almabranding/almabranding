@@ -1,0 +1,80 @@
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .thumbBox{
+        width: 50%;
+    }
+    nav .social{
+        display: none !important;
+    }
+    #nav.js {
+        margin-right: 0;
+    }
+    nav .menuBox {
+        margin-top: 19px;
+    }
+    .thumbBox.col-2 a{
+        margin-left:0; 
+    }
+    #work-desc > section{
+        width: 100%;
+    }
+     #work-desc{
+        margin: 20px 0;
+    }
+    #work-text,#work-info{
+        margin: 20px 0;
+    }
+    nav .logoBox {
+    margin: auto;
+}
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+    nav .social{
+        display: none !important;
+    }
+    .thumbBox{
+        width:50%;
+    }
+    #nav.js {
+        margin-right: 0;
+    }
+    nav .logoBox {
+    margin: auto;
+    float: none;
+}
+    nav .menuBox {
+        width: 100%;
+        text-align: center;
+        margin-top: 19px;
+    }
+    .msh{
+        margin-top:10px;
+        width:calc(100%);
+    }
+    #work-desc > section{
+        width: 100%;
+    }
+    #work-desc{
+        margin: 20px 0;
+    }
+    #work-text,#work-info{
+        margin: 20px 0;
+    }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    .thumbBox{
+        width: 99%;
+    }
+}

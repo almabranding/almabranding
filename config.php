@@ -1,7 +1,7 @@
 <?php
 // Always provide a TRAILING SLASH (/) AFTER A PATH
 define('LIBS', 'libs/');
-define('TEMP', '/almabranding/');
+define('TEMP', '/');
 define('URL', 'http://'.$_SERVER['HTTP_HOST'].TEMP);
 define('ROOT', $_SERVER['DOCUMENT_ROOT'].TEMP);
 define('CACHE', ROOT.'cache/');
@@ -12,7 +12,7 @@ define('IMAGES', UPLOAD.'images/');
 
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'almaweb');
+define('DB_NAME', 'almabran');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
 

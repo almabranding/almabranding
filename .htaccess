@@ -7,18 +7,19 @@ SetEnv PHP_VER 5
 Options +SymLinksIfOwnerMatch
 RewriteEngine On
 RewriteBase /
-ExpiresActive On
-ExpiresDefault A0
 <IfModule mod_mime.c>
     AddType image/ico .ico
 </IfModule>
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)(\.gz)?$">
-ExpiresDefault A29030400
 Header append Cache-Control "public"
 Header unset ETag
 FileETag None
 </FilesMatch>
-RewriteRule ^(.*)$ alma/index.php?url=$1 [QSA,L]
-#AddType application/x-httpd-php .html
+ 
+# Quitar el www del nombre de dominio
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

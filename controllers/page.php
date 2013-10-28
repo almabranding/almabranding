@@ -24,30 +24,12 @@ class Page extends Controller {
         $this->view->gallery=$this->model->getGallery($this->view->page['id']);
         $this->view->render('page/section');
     }
-    public function video($url,$pic=true) {
-        $this->view->js = array('video/js/custom.js');
-        $this->view->url=$url;
-        $this->view->page=$this->model->getPage($url);
-        $this->view->gallery=$this->model->getGallery($this->view->page['id']);
-        $this->view->render('video/index');
-    }
-    public function map($url,$pic=true) {
-        $this->view->js = array(
-            'map/js/modernizr.custom.17475.js',
-            'map/js/jquery.smoothzoom.js',
-            'map/js/custom.js'); 
-        $this->view->zoom=true;
-        $this->view->url=$url;
-        $this->view->page=$this->model->getPage($url);
-        $this->view->gallery=$this->model->getGallery($this->view->page['id']);
-        $this->view->render('map/index');
-    }
-    public function gallery($url,$pic=true) {
-        $this->view->js = array('gallery/js/sly.js','gallery/js/custom.js');
-        $this->view->css = array('gallery/css/horizontal.css');
-        $this->view->url=$url;
-        $this->view->page=$this->model->getPage($url);
-        $this->view->gallery=$this->model->getGallery($this->view->page['id']);
+    public function gallery($id) {
+        $this->view->js = array('gallery/js/masonry.pkgd.min.js','gallery/js/custom.js');
+        $name=explode('-', $id);
+        $this->view->gallery=$this->model->getGallery($name[0]);
+        $this->view->project=$this->model->getProject($name[0]);
+        if($this->view->project['template']=='dark')  $this->view->css = array('gallery/css/dark.css');
         $this->view->render('gallery/index');
     }
     

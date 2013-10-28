@@ -5,7 +5,6 @@ class Model {
     function __construct() {
         $this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
     }
-
     function getPage($url) {
         $sth = $this->db->prepare("SELECT * FROM page WHERE url = :url");
         $sth->execute(array(
@@ -14,29 +13,6 @@ class Model {
         $data = $sth->fetch();
         return $data;
     }
-
-    function getPageById($id) {
-        $sth = $this->db->prepare("SELECT * FROM page WHERE id = :id");
-        $sth->execute(array(
-            ':id' => $id
-        ));
-        $data = $sth->fetch();
-        return $data;
-    }
-
-    function getPageByCol($attr) {
-        $sth = $this->db->prepare("SELECT * FROM page WHERE " . $attr['col'] . " = :id");
-        $sth->execute(array(
-            ':id' => $attr['id']
-        ));
-        $data = $sth->fetch();
-        return $data;
-    }
-
-    function getGallery($id) {
-        return $this->db->select('SELECT * FROM images WHERE page = :page', array('page' => $id));
-    }
-
     function getTemplate($id) {
         $sth = $this->db->prepare("SELECT * FROM template WHERE id = :id");
         $sth->execute(array(
@@ -61,7 +37,14 @@ class Model {
     }
 
     
-
+public function idToRute($id) {
+       $id=str_pad($id, 9, "0", STR_PAD_LEFT);
+       $folder=str_split($id,3);
+       foreach($folder as $value){
+           $rute.=$value.'/';
+       } 
+       return $rute;
+    }
     public function ValidarDatos($campo) {
 
         //Array con las posibles cabeceras a utilizar por un spammer

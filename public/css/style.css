@@ -1,17 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
-
-@media screen and (max-width: 360px) {
-    
-}
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 521px) {
-
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 699px) {
-    
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../font/HelveticaNeueLTStd-Hv.eot');
+    src: url('../font/HelveticaNeueLTStd-Hv.eot?#iefix') format('embedded-opentype'),
+        url('../font/HelveticaNeueLTStd-Hv.woff') format('woff'),
+        url('../font/HelveticaNeueLTStd-Hv.ttf') format('truetype'),
+        url('../font/HelveticaNeueLTStd-Hv.svg#Helvetica Neue') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 /*Elementos*/
 *{
@@ -23,17 +20,13 @@
     text-transform: uppercase;
 }
 #container {
-    height: 98%;
-    margin-left: auto;
-    margin-right: auto;
+    height: auto;
+    margin: auto;
     position: relative;
     width: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 html, body {
-    height: 100%;
 }
 a{
     color: inherit;
@@ -51,9 +44,12 @@ body {
     font-size:11px;
     text-align:center;
     margin:0;
-    padding:0;
-    height: 100%;    
+    padding:0;  
     font-family:'Helvetica Neue', arial,sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    min-height: 100vh;
 }
 .bold{
     font-weight: bold;
@@ -74,12 +70,12 @@ header{
     z-index: 10;
 }
 .header{
-   width: 470px;
-   margin:55px auto 30px;
+    width: 470px;
+    margin:55px auto 30px;
 }
 
 .login{
-   
+
 }
 ol,ul{
     list-style: none outside none;
@@ -88,77 +84,19 @@ ol,ul{
     clear: both;
     float: none !important;
 }
-#wrapper {    
+#content {    
     position: relative;
-    min-height: 100%;
-    height: 100%;
     margin: 0 auto;
     min-width: 100%;
-    background: url("../images/gallerysBg.jpg") repeat scroll center center transparent;
-}
-footer{  
-    bottom: 0;
-    position: absolute;
+    -moz-box-flex: 1;
+    flex: 1;
     width: 100%;
-    z-index: 10;
-}
-footer nav{
-    color: #FFFFFF;
-    font-size: 10px;
-    padding: 0;
-    position: relative;;
-}
-footer nav li{
-    vertical-align: middle;
-    display: inline-block;
-    font-size: 12px;
-    margin: 0 8px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-.mapSubBar{
-    background: none repeat scroll 0 0 #000000;
-    height: 31px;
-    padding: 15px 12px 0;
-}
-
-.barRight{
-    float: right;
-}
-.barLeft{
-    float: left;
-}
-.barLeft li{
-    margin: 0 0 0 9px;
-    text-align: left;
-    width: 103px;
-}
-.preload{
-   background: url("../images/preload.gif") no-repeat scroll 0 0px transparent;
-    left: 100px;
-    position: absolute;
-    top: 100px;
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    z-index: 1001;
-    display: none;
 }
 h3{
     margin: 0 0 10px 0;
 }
 p{
     margin: 5px 0;
-}
-#floater {
-    float: left;
-    height: 50%;
-    margin-bottom: -115px;
-    position: relative;
-    width: 1px;
-}
-.frameHead{
-    background: #fff;
 }
 fieldset{
     text-align: left;
@@ -222,531 +160,346 @@ label {
     text-align: center;
     width: 100px;
 }
-#page{
-    margin: 20px auto;
-    max-width: 1150px;
-    padding: 20px;
-    width: 65%;
-}
-#video{
-    position: relative;
-    width: auto;
-    height: 100%;
-}
-#map{
-    padding: 20px;
-    position: relative;
-    width: auto;
-    height: 95%;
-}
-#map>div{
-    margin: auto;
-    width: 100% !important;
-    height: 100% !important;
-}
-#pageDesc{
-    margin: auto auto 15px;
-    text-align: left;
-    width: 66%;
-}
-#pageDesc div{
-    margin: 30px 0;
-}
-#imgFull{
-    background: #ffffff;
-    overflow: hidden;
-    float: left;
-    position: relative !important;
-    width: 100%;
-    z-index: 1 !important;
-    display: none;
-    clear: both;
-    float: none;
-}
-#imgFull img {
-    width: 100%;
-}   
 
-#body{
-    width: 100%;
-    float: left;
-    position: absolute !important;
-    z-index: 0 !important;
-    height: 100% !important;
-}
-.body-background{
-    background: none repeat scroll 0 0 #FFFFFF;
-    height: 100%;
-    overflow: hidden;
-    padding: 0 25px;
-    position: relative !important;
-    width: 400px;
-    z-index: 1000 !important;
-}
-.backgroundContainer{
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-    z-index: 10;
-    height: 100%;
-    margin: 1% auto auto;
-    position: relative;
-    width: 96%;
-    border-right: 20px solid #ffffff;
-    border-left: 20px solid #ffffff;
-}
-.galleryThumb {
-    background: none repeat scroll 0 0 #FFFFFF;
-    height: 100%;
-    padding: 0 25px;
-    position: absolute !important;
-    background: none repeat scroll 0 0 #FFFFFF;
-    height: 100%;
-    overflow: hidden;
-    padding: 0 25px;
-    position: absolute !important;
-    width: 100%;
-}
-.galleryThumb > img{
-    position: absolute !important;
-    height: 100%;
-}
-.body-background > img{
-    position: absolute !important;
-    height: 100%;
-}
-.logoBox{
-    background-image: url('../images/logo.png');
-    width: 217px;
-    height: 71px;
-    margin: auto;
-    position: absolute;
-    left:50px;
-    top:50px;
-    z-index: 11;
-}
-.accessFrame{
-    background: #f7f9f9;
-    width: 0%;
-    float: left;
-    height: 100%;
-    left: 0px;
-    z-index: 0;
-    position: relative;
-    overflow: hidden;
-}
-.accessFrame > div{
-    height: 750px;
-    margin: auto;
-    padding: 143px 0;
-}
-.frameContent{
-    width: 240px;
-    color:#807f83;
-    width: 190px;
-}
-.frameForm{
-    color:#807f83;
-    display: none;
-    width: 214px;
-}
-.frameForm form fieldset{
-    text-align: left;
-    margin-top: 10px;
-}
-.imageMove{
-}
-input[type="text"],input[type="password"]{
-    border:none;
-    border-radius: 0px;
-    width: 200px;
-}
-input[type="submit"]{
-    border:none;
-    background: none;
-    text-decoration: underline;
-    border-radius: 0px;
-    width: 200px;
-    text-align: left;
-    color:#807f83;
-    cursor: pointer;
-}
-.frameForm textarea{
-    border:none;
-    width: 210px;
-    height: 150px;
-    resize: none;
-    border-radius: 0px;
-}
-.loginBox{
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
-    height: 192px;
-    padding: 20px;
-    width: 235px;
-}
-.accessFrame p{
-    text-align: left;
-    margin-bottom: 12px; 
-}
-.title{
-    color:#000;
-}
-.accessFrame .link cufon{
-    /*border-bottom: 2px solid #cacaca;*/
-    cursor: pointer;
-}
-.accessFrame .link:hover cufon{
-    border-bottom: 2px solid #cacaca;
-    cursor: pointer;
-}
-.bgControl{
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-}
 
-.preloadW{
-   background: url("../images/preloadW.gif") no-repeat scroll 0 0px transparent !important;
-}
-.bgContainer.selected{
-    left: 0;
-    margin: 0;
-    position: absolute;
-    z-index: 1;
-    overflow: visible;
-}
-.labelInfo{
-    background: url("../images/labelInfo.png") no-repeat scroll 0 0px transparent;
-    left: 0px;
-    position: absolute;
-    top: 50%;
-    width: 100px;
-    height: 60px;
-    cursor: pointer;
-    z-index: 1
-}
-.labelNext{
-    background: url("../images/labelNext.png") no-repeat scroll 0 0px transparent;
+
+/*MENU*/
+nav{
+    background:  rgba(255,255,255,0.7);;
+    height: auto;
     position: fixed;
-    right: 0px;
-    top: 50%;
-    width: 100px;
-    height: 60px;
-    cursor: pointer;
-}
-#logoImg{
-    background: url("../images/logo.png") no-repeat scroll center center transparent;
-    height: 40px;
-    width: 168px;
-    margin: auto;
-}
-#menu{
-    background: none repeat scroll 0 0 #FFFFFF;
-    position: absolute;
+    top: 0;
+    vertical-align: bottom;
     width: 100%;
     z-index: 10;
 }
-#menuprimary{
-    background: none repeat scroll 0 0 #FFFFFF;
-    bottom: 0px;
-    margin-bottom: 44px;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    z-index: 23;
+nav hr{
+    border-bottom: 2px solid #000000;
+    display: none;
 }
-.menuTitle ul{
-    float:left;
-    width: 33%;
-}
-.menu{
-    
-}
-.header_menu {
-    color: #000000;
-    position: relative;
-    text-align: left;
-    width: 100%;
-}
-.header_menu > li {
-    color: #000000;
-    cursor: pointer;
-    display: inline;
-    float: left;
-    margin: 8px 0 21px 20px;
-    position: relative;
-    text-align: left;
-    width: 100px;
-}
-.header_menu .selected{
-    display: block;
-    height: 16px;
-    opacity: 1;
+nav section{
+    border-bottom: 2px solid #000000;
+    bottom: 0;
+    margin: 20px 50px 0;
+    padding-bottom: 20px;
     position: relative;
 }
-.header_menu > li:hover {
+nav .social{
+    display: inline-block;
 }
-.header_menu ul {
-    margin: auto;
-    padding-top: 5px;
-    position: relative;
-    top: 0;
-    width: 98%;
-}
-.header_menu:hover li ul {
-    opacity: 1;
-}
-.header_menu ul li {
-    /*height: 0;
-    opacity: 0;*/
-    margin: 5px 0;
-    overflow: hidden;    
-    padding: 0;
-}
-.header_menu ul li a {
-    border: medium none;
+.navIco{
+    background: url("../img/social.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 30px;
     margin: 0;
-    width: 100%;
-} 
-.menuTitle{
+    position: relative;
+    top: 6px;
+    width: 39px;
     cursor: pointer;
-    margin: 0 auto;
-    display: inherit !important;
 }
-.menuOpt:over{
-    color:#000;
+#tweeterW{
+    background-position: 0 -30px;
 }
-.menuView{
-    float:left;
-    display: inherit !important;
+#facebookW{
+    background-position: -44px -30px;
 }
-.bgListReset{
-    transform:translateZ(0px) translateX(0px) !important;
-    -webkit-transform:translateZ(0px) translateX(0px) !important;
-    -o-transform:translateZ(0px) translateX(0px) !important;
-    -ms-transform:translateZ(0px) translateX(0px) !important;
+#mailW{
+    background-position: -89px -30px;
 }
-.container-margin{
-    background: none repeat scroll 0 0 #EBEBEB;
-    margin: 2% auto auto;
-    position: relative;
-    width: 96%;
+#tweeterB{
+    background-position: 0 0;
 }
-.container-margin #body-background{
-    position: relative !important;
+#facebookB{
+    background-position: -44px 0;
 }
-.bgContainer{
-    float: left;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 500px;
-    z-index: 0;
+#mailB{
+    background-position: -89px 0;
 }
-.bgDesc{
-    background: none repeat scroll 0 0 #FFFFFF;
-    bottom: 0;
-    font-size: 20px;
-    height: 0;
-    opacity: 0;
-    padding: 10px 24px;
-    position: absolute;
+nav .menuBox{
+    min-width: 292px;
     text-align: left;
-    width: 100%;
-    z-index: 12;
-    line-height: 5px;
-}
-.bgDescShow{
-   height: auto; 
-   opacity: 1;
-}
-#fadeWhite{
-    background: none repeat scroll 0 0 #FFFFFF;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 19;
-    display: none;
-}
-#descMenu{
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
-    z-index: 20;
-}
-#descMenu #menu{
-    bottom: 0;
-    position: absolute;
-    z-index: 20;
-}
-#descMenu nav{
-    float: left;
-    min-width: 270px;
-    position: relative;
-    width: 10%;
-}
-#descInfo{
-    float: left;
-    margin: 15px 0 15px 21px;
-    max-width: 1000px;
-    position: relative;
-    text-align: left;
-    width: 65%;
-}
-#descInfoFull{
-    margin: auto;
-    position: relative;
-    text-align: left;
-    width: 65%;
-    max-width: 1150px;
-}
-#descInfoRight{
-    margin: auto;
-    padding: 20px 0;
-    position: relative;
-    text-align: left;
-    width: 96%;
-}
-.colsView{
-     -moz-column-count: 2;
-    -moz-column-gap: 20px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 20px;
-    column-count: 2;
-    column-gap: 20px;
-}
-#replace{
-    display: none;
-}
-#descNav {
-    bottom: 5px;
-    display: none;
     float: right;
-    margin: 0;
-    min-height: auto !important;
+    margin-top: 9px;
+    right: 0;
+    width: 25%;
+}
+nav .logoBox {
+    float: left;
+    width: 250px;
+    height: 60px;
+    background: url("../img/logoBlack.png") no-repeat;
+}
+nav .logoBox img{
+    width: 100%;
+}
+.logoBoxsmall{
+    width: 50px !important;
+}
+#menu {
+    background: none repeat scroll 0 0 #DDDDDD;
+    display: block;
+    float: left;
+    font-size: 1.35em;
+    text-align: center;
+    width: 1.4em;
+    display: none;
+}
+#nav.js {
+    display: inline;
+    margin-top: 0;
+    text-align: left;
+    width: atuo;
+    z-index: 2;
+}
+#nav.js li{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 20px;
+}
+.borderEast{
+    background: #000;
+    position: fixed;
+    height: 100%;
+    width: 10px;
+    right: 0;
+    top: 0;
+    z-index: 20;
+}
+.borderNord{
+    background: #000;
+    position: fixed;
+    width: 100%;
+    height: 10px;
+    z-index: 20;
+    top: 0;
+}
+.borderSouth{
+    background: #000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 10px;
+    z-index: 20;
+}
+.borderWest{
+    top: 0;
+    background: #000;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    z-index: 20;
+}
+#galleryImages{
+    text-align: left;
+}
+#Gallery .no-msh{
+    width: 100%;
+}
+#galleryImages .item {
+  position: relative;
+  overflow: hidden;
+}
+.msh{
+    margin-top:20px;
+    width:calc(50% - 10px);
+}
+.itemBox .focus-button {
+    background: url("../img/focus-arrow.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: none;
+    height: 26px;
+    overflow: hidden;
+    padding: 0;
     position: absolute;
-    right: 20px;
+    right: 10px;
+    top: 10px;
     width: 26px;
-    z-index: 100;
+    z-index: 99;
 }
-#descNav >div{
-    width: 22px;
-    height: 21px;
-    margin: 2px auto;
+.itemBox:hover .focus-button {
+    display: block;
+}
+.spacemsh{
+   width: 1%;
+}
+#Gallery .itemBox{
     cursor: pointer;
+   height: 100%;
+    width: 100%;
 }
-#descNav >div:hover{
-    opacity: 0.7;
+#galleryImages .itemBox {
+    
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
 }
-#descUp {
-    display:none;
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 -84px transparent !important;
+#Gallery .itemBox > img {
+    height: auto;
+    width: 100%;
 }
-#descClose {
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 -110px transparent !important;
+#galleryImages .item .itemBox img{
+    width: 100%;
 }
-#descDown{
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 0px transparent;
+
+/*MENU*/
+#thumbWrap{
+    text-align: left;
+    margin: 130px 50px 20px;    
 }
-#descPrev{
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 -30px transparent !important;
+footer {
+    margin:0  50px;
+    height: 50px;
+    border-top: 2px solid #000000;
 }
-#descNext{
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 -59px transparent !important;
+footer hr {
+    border-bottom: 2px solid #000000;
 }
-.navBox{
-    background: none repeat scroll 0 0 #FFFFFF;
-    bottom: 0px;
-    height: 0;
-    position: absolute;
-    width: auto;
-    z-index: 5;
-    opacity: 0;
+footer .col:first-child{
+    width: 50%;
 }
-.navBoxShow{
-    display: inherit !important;
-    min-height: 118px;
-    opacity: 1 !important;
-    height: auto !important;
+footer .col:last-child{
+    text-align: right;
 }
-.navBoxShowPerm{
-    min-height: 180px;
-    opacity: 1 !important;
-    height: auto !important;
+footer .col{
+    font-size: 15px;
+    margin-top: 5px; 
+    text-align: left;
+    width: 25%;
+    float: left;
 }
-#selectMenu{
-    position: absolute;
+.thumbBox{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition-duration: 0.7s;
+    transition-property: left, right, top;
+    width: 25%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.thumbBox > img{
     width: 100%;
     height: auto;
-    bottom: 0;
-    background: none repeat scroll 0 0 #FFFFFF;
 }
-#selectMenu #menu{
-    z-index: 10;
+.thumbBox.col-0 a{
+    margin-left:0; 
+}
+.thumbBox a{
+    height: 100%;
+    left: 0;
+    margin: 20px;
     position: absolute;
+    top: 0;
+    width: 100%;
 }
-#controlsMaps {
-    height: auto !important;
-    left: auto !important;
-    right: 67px !important;
-    top: 0 !important;
-    width: auto !important;
+.thumbBox a img{
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
 }
-#controlsMaps div{
-    float:left!important;
-    opacity: 1!important;
-    top:10px!important;
+.thumbBox:hover a img {
+  width: 120%;
 }
-.zoomMas, #_zi_icon {
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 -84px transparent !important;
-    left: auto !important;
-    right: 29px !important;
-}
-.zoomMenos, #_zo_icon {
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 0 transparent !important;
-}
-.mapZoom, #_zi_icon, #_zo_icon {
+.thumbBox:hover .arrowRight,.thumbBox:hover .arrowLeft{
+    display: block;
     cursor: pointer;
-    height: 22px !important;
-    position: absolute !important;
-    width: 22px !important;
-    z-index: 100 !important;
 }
-#download{
-    background: url("../images/navBtns.jpg") no-repeat scroll 0 -135px transparent !important;
-    height: 22px;
+.arrowLeft{
+    background: url("../img/arrowGallery.png") no-repeat scroll 0 0px transparent !important;
+    height: 20px;
+    width: 20px;
+    left: 40%;
+    bottom: 72px;
     position: absolute;
-    right: 115px;
-    top: 40px;
-    width: 92px;
-    z-index: 100;
+    z-index: 15;
 }
-#map div{
-    background-color: transparent !important;
+.arrowRight{
+    background: url("../img/arrowGallery.png") no-repeat scroll -20px 0 transparent !important;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 40%;
+    bottom: 72px;
+    z-index: 15;
 }
-#sectionImage{
-    width: 30%;
-    height: 100%;
-    float:left;
-    background-size: cover !important;
+.imagesList{
+    width: 9900px;
+    position: relative;
+    transition: all 2s;
+    -webkit-transition:all 2s;
+    left: 0;
+    
 }
-#sectionText{
-    background: none repeat scroll 0 0 #EBEBEB;
-    float: left;
-    height: 100%;
-    margin-left: 2%;
+.imagesList li{
+    display: inline;
+    width: 260px;
+}
+#Gallery{
+    height: auto;
+    margin:150px 50px 20px;
+    position: relative;
+    width:  auto;
+}
+#work-desc{
+    width: 100%;
+    margin: auto;
+    
     text-align: left;
-    width: 66%;
-    overflow: auto;
 }
-#sectionText > p{
-    padding: 5px 15px;
+#work-desc h2{
+    font-size: 18px;
+    margin: 10px 20px 0 0;
 }
-.langArrow{
-   background: url("../images/langArrow.jpg") no-repeat scroll 0 0 transparent;
-   width: 18px;
-   height: 18px;
-   float: right;
+#work-desc > section{
+    display: inline-block;
+    width: 50%;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+#work-text{
+    margin: 0 9px 0 0;
+    line-height: 140%;
+    text-align: justify;
+    
+}
+#work-text .client{
+    border-top: 1px solid #000;
+    margin: 20px 0;
+}
+
+#work-info{
+margin: 40px 6px;
+}
+.cast li {
+    border-top: 1px solid #000000;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 5px 0 3px;
+}
+.cast li:last-child{
+    border-bottom: 1px solid #000;
+}
+#lightBox{
+    background-color:#fff; 
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+.backgroundContainer{
+    background-color:#fff; 
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
