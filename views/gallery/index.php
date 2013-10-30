@@ -1,14 +1,17 @@
-<div id="Gallery" class="">
+<section id="Gallery" class="">
 
     <?
     foreach ($this->gallery as $key => $value) {
         $msh = ($key != 0) ? 'msh' : 'no-msh';
         $size = ($key != 0) ? 'med_' : '';
+        $lightbox=($value['isVideo'])?$value['video']:UPLOAD . 'images/' . Model::idToRute($value['photo_id']) . $value['file_name'];
         ?>
         <div class="item <?= $msh ?>">
             <div class="itemBox">
-                <img alt="<?= $value['caption_' . LANG]; ?>" src="<?= UPLOAD . 'images/' . Model::idToRute($value['photo_id']) . $size . $value['file_name']; ?>"/>
-                <div class="focus-button"> </div>
+                <a href="<?= $lightbox ?>" rel="shadowbox[<?=$this->project['name']?>]" title="<?=$value['caption']?>">
+                    <img alt="<?= $value['caption_' . LANG]; ?>" src="<?= UPLOAD . 'images/' . Model::idToRute($value['photo_id']) . $size . $value['file_name']; ?>"/>
+                    <div class="focus-button"> </div>
+                </a>
             </div>
         </div>
         <? if ($key == 0) { ?> <div id="galleryImages"> <? } ?>
@@ -17,9 +20,6 @@
     <article id="work-desc">
         
         <section>
-            <h2>
-            Lorem Ipsum es simplemente
-        </h2>
             <div id="work-text">
 <?= $this->project['content_' . LANG] ?>
             </div>
@@ -29,7 +29,7 @@
             </div>
         </section>
     </article>
-</div>
+</section>
 <section id="lightBox" >
     <div class='backgroundContainer' onclick="hideLight();"></div>
     <div class="arrowLeft" onclick="showLight(this.getAttribute('id'));"></div>

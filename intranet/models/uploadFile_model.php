@@ -72,6 +72,8 @@ class uploadFile_Model extends Model {
             $thumb->loadImage($filepath . $filename);
             $thumb->resize(500, 'width');
             $thumb->save($filepath . 'med_'.$filename);
+            $thumb->resize(200, 'width');
+            $thumb->save($filepath . 'm_' . $filename);
         }
         //$this->createThumbs($filename,$filepath, $filepath, $thumbWidth );
     }
@@ -98,8 +100,14 @@ class uploadFile_Model extends Model {
         $thumb->loadImage(UPLOAD . $rute . 'original/' . $img['file']);
         $thumb->resize(1200, 'width');
         $thumb->save(UPLOAD . $rute . 'med_' . $img['file']);
-        $thumb->crop(162, 215);
+        $thumb->crop(500, 310);
         $thumb->save(UPLOAD . $rute . 'thumb_' . $img['file']);
+        /*mobil*/
+        $thumb->loadImage(UPLOAD . $rute . 'original/' . $img['file']);
+        $thumb->resize(400, 'width');
+        $thumb->save(UPLOAD . $rute . 'm_' . $img['file']);
+        $thumb->crop(100, 100);
+        $thumb->save(UPLOAD . $rute . 'thumb_m_' . $img['file']);
         unlink(UPLOAD . 'temp/' . $img['file']);
         return $photo_id;
     }

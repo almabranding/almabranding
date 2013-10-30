@@ -12,7 +12,6 @@ class Projects extends Controller {
     public function lista($pag=1) 
     {
         $this->view->js = array('projects/js/list.js');
-        $this->view->searchModel=$this->model->searchForm();
         $this->view->models=$this->model->getModels($pag);
         $this->view->render('projects/list');  
     }
@@ -30,10 +29,10 @@ class Projects extends Controller {
         $this->view->modelPhotos=$this->model->getModelPhotos($id);
         $this->view->render('projects/gallery');  
     }
-     public function addmodel() 
+     public function addproject() 
     {
-        $this->view->form=$this->model->editModelForm('add');
-        $this->view->render('projects/editmodels');  
+        $this->view->form=$this->model->editProjectForm('add');
+        $this->view->render('projects/view'); 
     }
     public function deleteModel($id) 
     {

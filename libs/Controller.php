@@ -21,6 +21,16 @@ class Controller {
         $this->loadLang($name);
         
     }
+    public function loadSingleModel($name, $modelPath = 'models/') {
+        
+        $path = $modelPath . $name.'_model.php';
+        if (file_exists($path)) {
+            require $modelPath .$name.'_model.php';
+            $modelName = $name . '_Model';
+            $model=new $modelName();
+            return $model;
+        }        
+    }
     public function loadLang($name, $langPath = 'lang/en/') {
         Session::init();
         $lang=Session::get('lang');

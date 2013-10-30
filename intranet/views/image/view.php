@@ -6,7 +6,7 @@
     </div>
     <div class="clr"></div>
 </div>
-<? $this->form->render(); ?>
+<? $this->form->render('templates/image.php'); ?>
 
         
 <div class="container">
@@ -64,7 +64,7 @@
                 $('#ar_lock').change(function(e) {
                     var filename=$('#original').val();
                     if(this.checked){$('#filename').val('thumb_'+filename)} else {$('#filename').val(filename)}
-                    jcrop_api.setOptions(this.checked ? {aspectRatio: 0.76} : {aspectRatio: 0});
+                    jcrop_api.setOptions(this.checked ? {aspectRatio: 1.61} : {aspectRatio: 0});
                     jcrop_api.focus();
                 });
           

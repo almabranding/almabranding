@@ -9,5 +9,5 @@
     <div class="clr"></div>
 </div>
 <div id="sectionContent">
-    <?php $this->form->render('templates/custom-template-2.php'); ?>
+    <?php $this->form->render('templates/project_view.php'); ?>
 </div>

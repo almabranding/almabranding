@@ -9,10 +9,10 @@
         <meta name="keywords" content="" />
         <meta name="author" content="" />
 
-        <link rel="shortcut icon" href="<?php echo URL; ?>../favicon.png" Content-type="image/x-icon" />
+        <link rel="shortcut icon" href="<?php echo URL; ?>favicon.png" Content-type="image/x-icon" />
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/style.css" />
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/zebra_form.css" />
-        <link rel="stylesheet" href="<?php echo URL; ?>public/css/jquery.Jcrop.custom.css" />
+        <link rel="stylesheet" href="<?php echo URL; ?>public/css/jquery.Jcrop.css" />
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/HTML5Upload.css" />
         <link rel="stylesheet" href="<?php echo URL; ?>public/css/file-upload.css" />
         <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/themes/sunny/jquery-ui.css" />-->
@@ -21,7 +21,8 @@
 
     </head>
     <body>
-        <?php Session::init(); ?>
+        <?php Session::init();
+         $strNoCache = "?nocache=".time(); ?>
             <header>
                 <div class="header_logo">
                     <div class="wrapper">
@@ -35,6 +36,7 @@
                     <ul id="menuNav">
                         <? if (Session::get('role') == 1 || Session::get('role') == 6 || Session::get('role') == 2) { ?><li><a href="<?php echo URL . LANG; ?>/home/lista">home</a></li><? } ?>
                         <li><a href="<?php echo URL . LANG; ?>/projects/lista">projects</a></li>
+                        <li><a href="<?php echo URL . LANG; ?>/pages/lista">pages</a></li>
 <!--                        <li><a href="<?php echo URL . LANG; ?>/packages/lista">packages</a></li>
                         <li><a href="<?php echo URL . LANG; ?>/contacts/lista">contacts</a></li>-->
                         <? if (Session::get('role') == 1 || Session::get('role') == 6 || Session::get('role') == 2) { ?><li><a href="<?php echo URL . LANG; ?>/agencies/lista">agencies</a></li> <? } ?>
@@ -42,7 +44,7 @@
                         <? if (Session::get('role') == 1 || Session::get('role') == 6 || Session::get('role') == 2) { ?><li><a href="<?php echo URL . LANG; ?>/log/lista">log</a></li><? } ?>
                     </ul>
                     <ul id="langNav">
-                        <li><a href="<?=WEB?>" target="_blank">Sight Homepage</a></li>
+                        <li><a href="<?=WEB?>" target="_blank">Alma Branding Homepage</a></li>
               
                     </ul>
                     </div>

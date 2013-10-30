@@ -9,18 +9,18 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><?=($this->siteName)?>Almabranding</title>
+    <title><?=($this->siteName)?>Alma Branding</title>
     <meta charset="UTF-8"> 
     <meta property="og:site_name" content="" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <!--<link rel="shortcut icon" href="../favicon.ico" Content-type="image/x-icon" />-->
+    <link rel="shortcut icon" href="<?= URL; ?>favicon.png" Content-type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minium-scale=1.0,user-scalable=yes"/>
     <link rel="stylesheet" href="<?= URL; ?>public/css/style.css" />
     <link rel="stylesheet" href="<?= URL; ?>public/css/mobile.css" />
-    
-    <?php
+    <link rel="stylesheet" href="<?= URL; ?>public/css/shadowbox.css">
+    <?
     if (isset($this->css))
         foreach ($this->css as $css)
             echo '<link rel="stylesheet" href="'.URL.'views/'.$css.'"/>';

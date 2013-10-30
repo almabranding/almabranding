@@ -6,7 +6,7 @@ class Model {
         $this->db = new Database(DB_TYPE, DB_HOST, DB_NAME, DB_USER, DB_PASS);
     }
     function getPage($url) {
-        $sth = $this->db->prepare("SELECT * FROM page WHERE url = :url");
+        $sth = $this->db->prepare("SELECT * FROM pages WHERE url = :url");
         $sth->execute(array(
             ':url' => $url
         ));

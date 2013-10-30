@@ -14,17 +14,17 @@ $(window).load(function() {
         }else{
         }
     });
-    $("#nav").addClass("js");
-    $("#nav").addClass("js").before('<div id="menu">☰</div>');
-    $("#menu").click(function(){
-	$("#nav").toggle();
-    });
-    $("#nav").removeAttr("style");
-    $(window).resize(function(){
-            if(window.innerWidth > 768) {
-                    $("#nav").removeAttr("style");
-            }
-    });
+    //$("#nav").addClass("js");
+    //$("#nav").addClass("js").before('<div id="menu">☰</div>');
+    //$("#menu").click(function(){
+	//$("#nav").toggle();
+    //});
+    //$("#nav").removeAttr("style");
+//    $(window).resize(function(){
+//            if(window.innerWidth > 768) {
+//                    $("#nav").removeAttr("style");
+//            }
+//    });
 });
 function loadCufon() {
     Cufon.replace('p,span,label', std);

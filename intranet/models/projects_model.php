@@ -6,56 +6,56 @@ class Projects_Model extends Model {
         parent::__construct();
     }
 
-    public function searchForm($url = '/project/searchModel') {
-        $action = URL . LANG . $url;
-        $atributes = array(
-            'enctype' => 'multipart/form-data',
-        );
-        $form = new Zebra_Form('searchModel', 'GET', $action, $atributes);
+    /*    public function searchForm($url = '/project/searchModel') {
+      $action = URL . LANG . $url;
+      $atributes = array(
+      'enctype' => 'multipart/form-data',
+      );
+      $form = new Zebra_Form('searchModel', 'GET', $action, $atributes);
 
-        $form->add('hidden', '_add', 'model');
+      $form->add('hidden', '_add', 'model');
 
-        $form->add('label', 'label_name', 'name', 'Name');
-        $form->add('text', 'name', '', array('autocomplete' => 'off'));
-
-        /*
-          $form->add('label', 'label_modelList', 'modelList', 'Model:');
-          $obj = $form->add('select', 'modelList', '', array('autocomplete' => 'off'));
-          foreach ($this->getAllModels() as $key => $value) {
-          $obt[$value['name']] = $value['name'];
-          }
-          $obj->add_options($obt);
-          unset($obt);
+      $form->add('label', 'label_name', 'name', 'Name');
+      $form->add('text', 'name', '', array('autocomplete' => 'off'));
 
 
-          $form->add('label', 'label_notifications', 'notifications', 'Advanced Search');
-          $obj = $form->add('checkboxes', 'notifications', array(
-          'yes' => '',
-          ), array('autocomplete' => 'off'));
+      $form->add('label', 'label_modelList', 'modelList', 'Model:');
+      $obj = $form->add('select', 'modelList', '', array('autocomplete' => 'off'));
+      foreach ($this->getAllModels() as $key => $value) {
+      $obt[$value['name']] = $value['name'];
+      }
+      $obj->add_options($obt);
+      unset($obt);
 
-          $form->add('label', 'label_category', 'category', 'Category');
-          $obj = $form->add('select', 'category', '', array('autocomplete' => 'off'));
-          foreach ($this->getModelsCategories() as $key => $value) {
-          $obt[$value['id']] = $value['name'];
-          }
-          if ($obt)
-          $obj->add_options($obt);
 
-          unset($obt);
-         */
+      $form->add('label', 'label_notifications', 'notifications', 'Advanced Search');
+      $obj = $form->add('checkboxes', 'notifications', array(
+      'yes' => '',
+      ), array('autocomplete' => 'off'));
 
+      $form->add('label', 'label_category', 'category', 'Category');
+      $obj = $form->add('select', 'category', '', array('autocomplete' => 'off'));
+      foreach ($this->getModelsCategories() as $key => $value) {
+      $obt[$value['id']] = $value['name'];
+      }
+      if ($obt)
+      $obj->add_options($obt);
+
+      unset($obt);
 
 
 
-        $form->add('submit', '_btnsubmit', 'Search');
-        $form->validate();
-        return $form;
-    }
+
+
+      $form->add('submit', '_btnsubmit', 'Search');
+      $form->validate();
+      return $form;
+      } */
 
     public function editProjectForm($type = 'add', $id = 'null') {
         $action = ($type == 'add') ? URL . '/projects/add' : URL . '/projects/edit/' . $id;
         if ($type == 'edit')
-            $model = $this->getModel($id);
+            $value = $this->getModel($id);
         $atributes = array(
             'enctype' => 'multipart/form-data',
         );
@@ -64,24 +64,33 @@ class Projects_Model extends Model {
         $form->add('hidden', '_add', 'model');
 
         $form->add('label', 'label_name', 'name', 'Name');
-        $form->add('text', 'name', $model['name'], array('autocomplete' => 'off', 'required' => array('error', 'Name is required!')));
+        $form->add('text', 'name', $value['name'], array('autocomplete' => 'off', 'required' => array('error', 'Name is required!')));
+
+
         $form->add('label', 'label_templates', 'templates', 'Template');
-        $obj = $form->add('select', 'templates', $model['template'], array('autocomplete' => 'off'));
+        $obj = $form->add('select', 'templates', $value['template'], array('autocomplete' => 'off'));
         $obt['light'] = 'Light';
         $obt['dark'] = 'Dark';
         $obj->add_options($obt, true);
         unset($obt);
-
+        
+        $form->add('label', 'label_visibility', 'visibility', 'Visibility:');
+        $obj = $form->add('select', 'visibility', $value['visibility']);
+        $obj->add_options(array(
+            'public' => 'Public',
+            'private' => 'Private',
+        ),true);
+        
         foreach ($this->_langs as $lng) {
             $obj = $form->add('label', 'label_content_' . $lng, 'content_' . $lng, 'Content ' . $lng);
             $obj->set_attributes(array(
                 'style' => 'float:none',
             ));
-            $obj = $form->add('textarea', 'content_' . $lng, ($model['content_' . $lng]), array('autocomplete' => 'off'));
+            $obj = $form->add('textarea', 'content_' . $lng, ($value['content_' . $lng]), array('autocomplete' => 'off'));
             $obj->set_attributes(array(
                 'class' => 'wysiwyg',
             ));
-            $obj = $form->add('textarea', 'content_list_' . $lng, ($model['content_list_' . $lng]), array('autocomplete' => 'off'));
+            $obj = $form->add('textarea', 'content_list_' . $lng, ($value['content_list_' . $lng]), array('autocomplete' => 'off'));
             $obj->set_attributes(array(
                 'class' => 'wysiwyg',
             ));
@@ -160,12 +169,11 @@ class Projects_Model extends Model {
     }
 
     public function edit($id) {
-        //$project = $this->getModel($id);
-        //Logs::set("Ha modificado el projecto " . $project['name']);
         $data = array(
-            'name' => $_POST['name'],
-            'template' => $_POST['templates'],
-            'updated_at' => $this->getTimeSQL(),
+            'name'          => $_POST['name'],
+            'template'      => $_POST['templates'],
+            'visibility'    => $_POST['visibility'],
+            'updated_at'    => $this->getTimeSQL(),
         );
         foreach ($this->_langs as $lng) {
             $data['content_' . $lng] = stripslashes($_POST['content_' . $lng]);
@@ -180,6 +188,7 @@ class Projects_Model extends Model {
         $data = array(
             'name' => $_POST['name'],
             'template' => $_POST['templates'],
+            'visibility' => $_POST['visibility'],
             'created_at' => $this->getTimeSQL(),
             'updated_at' => $this->getTimeSQL(),
         );

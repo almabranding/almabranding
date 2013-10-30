@@ -4,7 +4,7 @@ class Index extends Controller {
 
     function __construct() {
         parent::__construct();
-        if(Session::get('loggedIn')) header('location: '.URL.LANG.'/models');
+        if(Session::get('loggedIn')) header('location: '.URL.LANG.'/projects');
     }
     
     function index() {

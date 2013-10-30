@@ -3,7 +3,7 @@
     <h1><?= $this->model['name']; ?></h1>
     <div id="sectionNav">
         <div class="linkNav" id="allSelect">Select all photos</div>
-        <a target="_blank" href="<?php echo WEB; ?>ES/gallery/model/<?= $this->id; ?>"><div class="linkNav">View portfolio</div></a>
+        <a target="_blank" href="<?= WEB; ?>project/gallery/<?= $this->id.'-'.  urlencode($this->model['name']); ?>"><div class="linkNav">View project</div></a>
         <div class="btn blue" id="selectThumbnail">Use as a thumbnail</div>
         <div id="deleteImage" class="btn red">Delete</div>
         <div class="btn grey" onclick="showPop('newImage');" >Add new photo</div>
@@ -19,7 +19,7 @@
             <? foreach ($this->modelPhotos as $key => $value) { ?>
                 <li id="foo_<?= $value['id'] ?>" class="ui-state-default modelList <?= ($value['thumb']) ? 'mainPic' : '' ?>">
                     <input value="<?= $value['id']; ?>" name="check[]" class="checkFoto" type="checkbox">
-                    <img width="154" height="207" class="listImage" alt="<?= $value['caption_' . LANG]; ?>" src="<?= '/' . UPLOAD . 'images/' . Model::idToRute($value['photo_id']) . 'thumb_' . $value['file_name']; ?>"/>
+                    <img width="154" height="207" class="listImage" alt="<?= $value['caption_' . LANG]; ?>" src="<?= '/' . UPLOAD . 'images/' . Model::idToRute($value['photo_id']) . 'thumb_' . $value['file_name'].$strNoCache; ?>"/>
                     <select name="visibility[<?= $value['id']; ?>]"  class="inputSmall" style='text-transform:capitalize;'>
                         <option value="public" <? if ($value['visibility'] == 'public') echo 'selected'; ?>>Public</option><option value="private" <? if ($value['visibility'] == 'private') echo 'selected'; ?>>Private</option>
                     </select>

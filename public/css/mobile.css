@@ -8,10 +8,7 @@
     .thumbBox{
         width: 50%;
     }
-    nav .social{
-        display: none !important;
-    }
-    #nav.js {
+    #nav{
         margin-right: 0;
     }
     nav .menuBox {
@@ -23,40 +20,63 @@
     #work-desc > section{
         width: 100%;
     }
-     #work-desc{
+    #work-desc{
         margin: 20px 0;
     }
     #work-text,#work-info{
         margin: 20px 0;
     }
     nav .logoBox {
-    margin: auto;
+    }
+    footer .col{
+        font-size: 12px;
+    }
+    .thumbBox a {
+    margin-left: 20;
 }
+
+    #about .col-3-of-4{
+        border: none;
+    }
+    
+    #work-text, #work-info,.cast li, #work-text .client{
+        width: 100%;
+    }
+    
 }
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
+    nav section{
+        padding: 0;
+    }
+    #thumbWrap{
+        margin-top: 100px;
+    }
+    .thumbBox.col-0 a,.thumbBox.col-2 a {
+    margin-left: 0;
+    }
+    footer .col{
+        font-size: 8px;
+    }
     nav .social{
         display: none !important;
     }
     .thumbBox{
         width:50%;
     }
-    #nav.js {
-        margin-right: 0;
-    }
     nav .logoBox {
-    margin: auto;
-    float: none;
-}
+        background: url("../img/logoMini.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) ;
+        width: 70px;
+        height: 70px;
+    }
     nav .menuBox {
-        width: 100%;
         text-align: center;
-        margin-top: 19px;
+        margin-top: 13px;
     }
     .msh{
         margin-top:10px;
-        width:calc(100%);
+        width:100% ;
     }
     #work-desc > section{
         width: 100%;
@@ -66,6 +86,19 @@
     }
     #work-text,#work-info{
         margin: 20px 0;
+    }
+    #nav {
+        margin-right: 0;
+    }
+    #about .col-3-of-4{
+        border: none;
+    }
+    #about .allCols > section#team li{
+        width: 100%;
+    }
+    
+    #work-text, #work-info,.cast li, #work-text .client{
+        width: 100%;
     }
 }
 
@@ -77,4 +110,8 @@
     .thumbBox{
         width: 99%;
     }
+    
+    .thumbBox a {
+    margin-left: 0;
+}
 }

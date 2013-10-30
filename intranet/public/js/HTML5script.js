@@ -7,7 +7,7 @@ $(function() {
     var project = $('#project').val();
     var uploadType = $('#uploadType').val();
     var bbdd = $('#bbdd').val();
-    var maxfilesize = 2;
+    var maxfilesize = 4;
     var maxfiles = 50;
     dropbox.filedrop({
         // The name of the $_FILES entry:
